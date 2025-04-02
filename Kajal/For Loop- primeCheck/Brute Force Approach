@@ -1,0 +1,14 @@
+class Solution {
+  public:
+    string isPrime(int n) {
+    if (n < 2)
+        return "No";
+
+    for (int i = 2; i < n; i++) { // Checking divisibility from 2 to n-1
+        if (n % i == 0)
+            return "No"; // Not a prime number
+    }
+
+    return "Yes"; // Prime number
+}
+//Time complexity - O(n).
