@@ -1,1 +1,25 @@
+# Prime Number Check Using For Loop
 
+## 📝 Problem Statement
+Check if a given number is a prime number using a `for` loop.
+
+## 🔗 Problem Link
+[Click here to read the problem](https://www.geeksforgeeks.org/prime-numbers/)
+
+## ✅ Approach 1: Using a Simple For Loop
+### 📌 Code:
+class Solution {
+  public:
+    string isPrime(int n) {
+
+        if(n<=1) return "No";
+
+        for (int i = 2; i <= sqrt(n); i++) { //Start a loop from 2 to (n-1)
+            if(n%i==0) return "No"; //if n is divisible by any number in this range,it's not a 
+                                    //prime
+        }
+        return "Yes"; //if no divisor is found, the number is prime.
+    }
+};
+
+//Time Complexity: O(n).
