@@ -1,5 +1,5 @@
 # 🔗 Problem Link
-[Click here to read the problem](https://www.geeksforgeeks.org/problems/for-loop-primechecl/1?page=1&category=CPP&sortBy=submissions)
+[Click here to read the problem](https://www.geeksforgeeks.org/problems/c-2-d-arrays0708/1?page=2&category=CPP&sortBy=submissions)
 
 vector<vector<int>> transpose(int a[][M], int n)
 {
