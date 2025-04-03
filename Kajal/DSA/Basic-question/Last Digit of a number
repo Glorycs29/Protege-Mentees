@@ -1,0 +1,10 @@
+//User function Template for C++
+
+void utility(int n){
+
+    //just complete below statement
+    int ans = abs(n%10); // This will give absolute value of ans
+
+    //print the result
+    cout << ans <<endl;
+}
