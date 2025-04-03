@@ -1,3 +1,6 @@
+# 🔗 Problem Link
+[Click here to read the problem](https://www.geeksforgeeks.org/problems/for-loop-primechecl/1?page=1&category=CPP&sortBy=submissions)
+
 vector<vector<int>> transpose(int a[][M], int n)
 {
     vector<vector<int>> result(M, vector<int>(n));
