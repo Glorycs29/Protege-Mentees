@@ -1,0 +1,13 @@
+//User function Template for C++
+
+// Complete the function
+int firstDigit(int n){
+    // code here
+    n = abs(n);
+    
+    while(n>=10){
+        n /= 10;
+    }
+    
+    return n;
+}
