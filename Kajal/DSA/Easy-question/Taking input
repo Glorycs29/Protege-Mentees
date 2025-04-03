@@ -1,0 +1,10 @@
+class Solution {
+  public:
+    void inputData() {
+        int n;
+        string str;
+        cin>>n;
+        cin>>str;
+        cout<<n<<" "<<str<<endl;
+    }
+};
