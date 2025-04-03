@@ -1,0 +1,8 @@
+// User function Template for C++
+
+string utility(int n) {
+    if(n%2!=0){
+        return "You";
+    }
+    else return "Friend";
+}
