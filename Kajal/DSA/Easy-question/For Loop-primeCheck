@@ -1,15 +1,134 @@
 # 🔗 Problem Link
 [Click here to read the problem](https://www.geeksforgeeks.org/problems/for-loop-primechecl/1?page=1&category=CPP&sortBy=submissions)
 
+Approach 1: Trial Division Method
+// C++ Program to check for prime number using Simple Trial Division
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n = 15, count = 0;
+
+    // If number is less than/equal to 1,it is not prime
+    if (n <= 1)
+        cout << n << " is NOT prime." << endl;
+    else {
+
+        // Check for divisors from 1 to n
+        for (int i = 1; i <= n; i++) {
+
+            // Check how many number is divisible by n
+            if (n % i == 0)
+                count++;
+        }
+
+        // If n is divisible by more than 2 numbers then it is not prime
+        if (count > 2)
+            cout << n << " is NOT prime." << endl;
+
+        // else it is prime
+        else
+            cout << n << " is prime." << endl;
+    }
+
+    return 0;
+}
+
+// Output
+15 is NOT prime.
+
+// Time Complexity - O(n)
+// Space Complexity - O(1)
+
+Approach 2: Optimized Trial Division Approach
+// C++ Program to Check if a Number is Prime using Square Root
 class Solution {
   public:
     string isPrime(int n) {
 
         if(n<=1) return "No";
 
-        for (int i = 2; i <= sqrt(n); i++) {
+        for (int i = 2; i <= sqrt(n); i++) { 
             if(n%i==0) return "No";
         }
         return "Yes";
     }
 };
+
+// Time Complexity - O(√n)
+// Space Complexity - O(1)
+
+Approach 3: using (i * i <= n)
+// C++ Program to Check if a Number is Prime using Square Root
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n = 31, count = 0;
+
+    // If number is less than/equal to 1,it is not prime
+    if (n <= 1)
+        cout << n << " is NOT prime" << endl;
+    else {
+
+        // Check how many numbers divide n in range 2 to sqrt(n)
+        for (int i = 2; i * i <= n; i++) {
+            if (n % i == 0)
+                count++;
+        }
+
+        // if count is greater than 0 then n is not prime
+        if (count > 0)
+            cout << n << " is NOT prime" << endl;
+
+        // else n is prime
+        else
+            cout << n << " is prime" << endl;
+    }
+
+    return 0;
+}
+
+// Output
+31 is prime.
+
+// Time Complexity - O(√n)
+// Space Complexity - O(1)
+
+Approach 4: using a variable
+// C++ Program to Check if a Number is Prime using Square Root
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n = 16, count = 0, s = sqrt(n);
+
+    // If number is less than/equal to 1,it is not prime
+    if (n <= 1)
+        cout << n << " is NOT prime" << endl;
+    else {
+
+        // Check how many numbers divide n in range 2 to sqrt(n)
+        for (int i = 2; i <= s; i++) {
+            if (n % i == 0)
+                count++;
+        }
+
+        // if count is greater than 0 then n is not prime
+        if (count > 0)
+            cout << n << " is NOT prime" << endl;
+
+        // else n is prime
+        else
+            cout << n << " is prime" << endl;
+    }
+
+    return 0;
+}
+
+// Output
+16 is NOT prime.
+
+// Time Complexity - O(√n)
+// Space Complexity - O(1)
+
