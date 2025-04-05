@@ -7,38 +7,33 @@ DFS for detecting cycle
 -as we are using  2 vis and pathvis array in the dfs
 ## CODE
 
-<pre> ```
+```cpp
 class Solution {
-    private:
-    bool dfs(int node, vector<vector<int>> & adj , vector<int> & vis, vector<int>& pathvis){
-        vis[node]=1;
-        pathvis[node]=1;
-        for( auto nei: adj[node]){
-            // IF NEVER TRAVERSED THROUGH IT THEN
-            if(vis[nei]==0 && pathvis[nei]==0){
-                bool ans=dfs(nei, adj, vis, pathvis);
-                if(ans==true ) return true;
-            }
-            //IF CYCLE DETECTED
-            else if(vis[nei] && pathvis[nei]) return true;
-            
-  }
-        pathvis[node]=0;
+private:
+    bool dfs(int node, vector<vector<int>> &adj, vector<int> &vis, vector<int>& pathvis) {
+        vis[node] = 1;
+        pathvis[node] = 1;
+        for (auto nei : adj[node]) {
+            if (vis[nei] == 0 && pathvis[nei] == 0) {
+                bool ans = dfs(nei, adj, vis, pathvis);
+                if (ans == true) return true;
+            } else if (vis[nei] && pathvis[nei]) return true;
+        }
+        pathvis[node] = 0;
         return false;
     }
-  public:
-    // Function to detect cycle in a directed graph.
+
+public:
     bool isCyclic(vector<vector<int>> &adj) {
-        int n =adj.size();
+        int n = adj.size();
         vector<int> vis(n, 0);
         vector<int> pathvis(n, 0);
-    for(int i=0;i<n;i++){
-        if(!vis[i]){
-           if(dfs(i, adj , vis, pathvis) ==true) return true; 
+        for (int i = 0; i < n; i++) {
+            if (!vis[i]) {
+                if (dfs(i, adj, vis, pathvis) == true) return true;
+            }
         }
-    }
-    return false;
+        return false;
     }
 };
 
-                     ``` </pre>
