@@ -6,7 +6,8 @@ DFS for detecting cycle
 ## space complexity->O(2V) 
 -as we are using  2 vis and pathvis array in the dfs
 ## CODE
-'''
+
+<pre> ```
 class Solution {
     private:
     bool dfs(int node, vector<vector<int>> & adj , vector<int> & vis, vector<int>& pathvis){
@@ -39,4 +40,5 @@ class Solution {
     return false;
     }
 };
-'''
+
+                     ``` </pre>
