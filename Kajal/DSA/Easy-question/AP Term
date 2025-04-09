@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, d, n;
+    cin >> a >> d >> n;
+
+    int nthTerm = a + (n - 1) * d;
+    cout << nthTerm << endl;
+
+    return 0;
+}
