@@ -1,0 +1,44 @@
+#include <iostream>
+#include <string>
+#include <cctype>
+using namespace std;
+
+void BasicDataType(string S) {
+    int len = S.length();
+
+    // Case 1: CHAR
+    if (len == 1 && !isdigit(S[0])) {
+        cout << sizeof(char) << endl;
+        return;
+    }
+
+    // Case 2: FLOAT (ends with 'f' and contains '.')
+    if (S.find('.') != string::npos && S.back() == 'f') {
+        cout << sizeof(float) << endl;
+        return;
+    }
+
+    // Case 3: DOUBLE (contains '.' but doesn't end with 'f')
+    if (S.find('.') != string::npos) {
+        cout << sizeof(double) << endl;
+        return;
+    }
+
+    // Case 4: INTEGER (only digits or optionally with '+' or '-')
+    bool isInteger = true;
+    int start = (S[0] == '+' || S[0] == '-') ? 1 : 0;
+    for (int i = start; i < len; ++i) {
+        if (!isdigit(S[i])) {
+            isInteger = false;
+            break;
+        }
+    }
+
+    if (isInteger) {
+        cout << sizeof(int) << endl;
+        return;
+    }
+
+    // Fallback (though not needed with given constraints)
+    cout << "Invalid Input" << endl;
+}
