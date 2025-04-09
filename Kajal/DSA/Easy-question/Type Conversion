@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double d;
+    cin >> d;
+
+    int intValue = (int)d;  // Typecasting double to int
+    cout << intValue << endl;
+
+    return 0;
+}
