@@ -1,0 +1,131 @@
+// #include<iostream>
+// using namespace std;
+
+/* semicolon(;) - to end line
+cout<< - to write
+cout>> - compilation error
+int main(){
+    cout<<"Namaste Dunia :-)"<<endl; endl for new line or enter (mostly yahi use karte hai)
+}
+
+int main(){
+    cout<<"Main Love babbar hu"<<'\n'; // you can use '\n' also ('\n' - to enter)
+    cout<<"World\n"; //you can write in this way also
+}
+
+int main(){
+    cout<<"Namaste Dunia :-)"; // you can write in this way also
+    cout<<"\n"; 
+}
+
+
+Datatypes and variable
+int - datatype (provide 4 byte -> 32 bit memory)
+a - variable
+char - datatype (provide 1 byte -> 8 bit memory)
+bool - true(1) , false(0) (provide 1 bit memory)
+(provide true or false according to the condition)
+float - datatype (provide 8 byte -> 32 bit)
+double - datatype (provide 8 byte -> 32 bit)
+donot start a variable name from a digit 
+1abc - wrong variable name (starting with a digit)
+
+int main(){
+    int a = 123;   
+    cout<<a<<endl;
+
+    char b = 'v'; // you cannot put double letter like 'ab' for char datatype it will give an error.
+    cout<<b<<endl;
+
+    bool bl = true;
+    cout<<bl<<endl;
+
+    float f = 1.2;
+    cout<<f<<endl;
+
+    double d = 1.23;
+    cout<<d<<endl;
+
+    int size = sizeof(d);
+    cout<<"Size of d is : "<<size<<endl;
+}
+
+ASCII table
+a - 97
+A - 65
+
+TypeCasting
+int main(){
+    int a = 'a';
+    cout<<a<<endl;
+
+    char ch = 98;
+    cout<<int(ch)<<endl;
+
+    char ch1 = 123456; // @ - 64 (ASCII Value)
+    cout<< ch1 <<endl;
+}
+
+How negative number are stored?
+First bit for psitive number - 0
+First bit for negative number - 1
+
+for negative number (example -> -5)
+1) Ignore the negative sign (5)
+2) Convert into binary representation (000000000101)
+(integer - 4 byte(32 bits))
+take 2's compliment and store
+when you want to print or display number(-5)
+again do 2's compliment and you will get the number
+*/
+
+// int main(){
+//     unsigned int a = 112;
+//     cout<<a<<endl;
+
+//     unsigned int a = -112; (because of most significant bit(1), you will get a huge value)
+//     cout<<a<<endl;
+// }
+
+// Operators
+// float/int = float
+// double/int = double
+//int main(){
+    // int a = 2/5;
+    // cout<<a<<endl;
+
+    // int b = 2.0/5;
+    // cout<<b<<endl;
+
+    // cout<<2.0/5<<endl;
+
+    // float c = 2.0/5;
+    // cout<<c<<endl;
+
+    // double d = 2.0/5;
+    // cout<<d<<endl;
+
+    // int a = 2;
+    // int b = 3;
+
+    // bool first = (a==b);
+    // cout<<first<<endl;
+
+    // bool second = (a>b);
+    // cout<<second<<endl;
+
+    // bool third = (a<b);
+    // cout<<third<<endl;
+
+    // bool fourth = (a>=b);
+    // cout<<fourth<<endl;
+
+    // bool fifth = (a<=b);
+    // cout<<fifth<<endl;
+
+    // bool sixth = (a!=b);
+    // cout<<sixth<<endl;
+
+    // int a = 0;
+    // cout<<!a<<endl;
+//}
