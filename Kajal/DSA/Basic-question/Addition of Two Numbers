@@ -1,9 +1,13 @@
 # 🔗 Problem Link
 [Click here to read the problem](https://www.geeksforgeeks.org/problems/addition-of-two-numbers0812/1?page=1&category=CPP&sortBy=submissions)
 
-class Solution {
-  public:
+// Define a class named Solution
+class Solution { 
+  public: // Access specifier - members under this can be accessed outside the class
+    
+    // A public member function named 'addition' that takes two integers as parameters
     int addition(int a, int b) {
-        return a+b;
+        // Returns the sum of the two input integers
+        return a + b;
     }
 };
