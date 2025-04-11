@@ -1,0 +1,185 @@
+/*Time Complexity
+
+Q) What is Time Complexity?
+1) It is the amount of time taken by an algorithm to run.
+2) as a function of length of the input.
+
+Q) Why we should know about Time Complexity?
+1) For making better programs
+2) Comparisons of algo
+
+Example
+Algorithm A -> High processing -> Fast machine -> Fast algorithm(wrong)
+Algorithm B -> low processing -> Slow machine -> Slow algorithm(wrong)
+
+we can not tell fast or slow algo on the basis of fast or slow machine
+The only way to tell which one is fast algo and which one is slow algo
+is Time Complexity
+
+Big O notation -> worst case complexity -> upper bound (mostly asked in interviews and exams)
+Theta notation -> average case complexity 
+Omega notation -> best case complexity -> lower bound
+
+Example of Big O notation:
+Constant time -> O(1) (for loop jab 0 to 10 time run karta hai -> 10 times iteration) 
+Linear time -> O(n) (for loop jab 0 to n time run karta hai -> n iteration)
+Logarithmic time -> O(logn) (Binary Search)
+Quadratic time -> O(n^2) (nested loop -> one loop from 0 to n inside another loop 0 to n -> two times n iteration)
+Cubic time -> O(n^3) (three loop -> three times n iteration -> nested loop inside another loop)
+
+O(N!)>O(2^n)>O(N^3)>O(N^2)>O(Nlogn)>O(N)>O(logn)>O(1)
+
+O(N!) (highest time complexity)
+O(2^n)
+O(N^3)
+O(N^2)
+O(Nlogn) (sorting like quick sort , heap sort and  merge sort)
+O(N) 
+O(logn)
+O(1) (least time complexity)
+
+Question                       Answer
+f(n) = 2n^2 + 3n       ->      O(n^2)
+f(n) = 4n^4 + 3n^3     ->      O(n^4)
+f(n) = n^2 + logn      ->      O(n^2)
+f(n) = 12001           ->      O(1)
+f(n) = 3n^3 + 2n^2 + 5 ->      O(n^3)
+f(n) = (n^3/100)       ->      O(n^3)
+f(n) = 5n^2 + logn     ->      O(n^2)
+f(n) = (n/4)           ->      O(n)
+f(n) = (n+4/4)         ->      O(n)
+
+Q) What is the time complexity of following code:
+
+int a = 0, b = 0;
+for(i=0; i<n; i++){
+    a = a + rand();
+}
+for(j=0; j<m; j++){
+    b = b + rand();
+}
+
+Assume that rand() is O(1) time, O(1) space function.
+
+Ans)  O(n) + O(m) -> O(n+m)
+
+int a = 0, b = 0;
+for(i=0; i<n; i++){
+    for(j=0; j<n; j++){
+       a = a + j;
+    }
+}
+for(k=0; k<n; k++){
+    b = b + k;
+}
+
+Ans) O(n^2) + O(n) -> O(n^2)
+
+int a = 0;
+for(i=0; i<n; i++){
+    for(j=n; j<i; j--){
+       a = a + i + j;
+    }
+}
+
+Ans) O(n^2)
+
+har for loop(0 to n) ki time complexity O(n) nahi hoti hai
+agar loop ka ander ka function ki time complexity O(1) hai then
+only you can say O(n). 
+
+agar loop ka ander recursive call kar rahka hai aur woh 8indiacate kar raha 
+hai ek aise funsction ko0 jisme for loop present hai tu time complexity O(n)
+nahi hogi, change ho jayegi.
+
+Stuck in Time Limit Exceeded
+Use 10^8 operation rule -> Most of the modern machine can perform 10^8 operation/second
+on the basis of 10^8 operation rule hum question ko dekh kar decide kar sakte hai ki
+konsi complexity ki algo use kar sakte hai.
+
+Constraints:
+1<n<10^6
+1<n<1000
+
+Time Complexity (Constraint chart)
+<[10...11]  -> O(n!), O(n^6)
+<[15...18]  -> O(2^n * n^2)
+<100        -> O(n^4)
+<400        -> O(n^3)
+<2000       -> O(n^2 * logn)
+<10^4       -> O(n^2)
+<10^6       -> O(nlogn)
+<10^8       -> O(n), O(logn) 
+
+agar hum 10^8 constraint ma O(n) and O(logn) ka alawa dusra
+koi time complexity wala algo write karta hai tu huma time limit exceeded ka 
+error show hoga
+
+agar hum 10^4 constraint ki baat kara tu ussa upar wali time complexity
+algo time limit exceeded(TLE) error show karagi aur ussa below wala time complexity
+algo koi error nahi denge.
+
+*/
+
+
+/*
+
+Space Complexity
+It is the amount of space taken by an algorithm in memory.
+
+int a, int b; -> O(1)
+
+Q) What is the space complexity of following code:
+
+int a = 0, b = 0;
+for(i=0; i<n; i++){
+    a = a + rand();
+}
+for(j=0; j<m; j++){
+    b = b + rand();
+}
+
+Assume that rand() is O(1) time, O(1) space function.
+
+Ans) O(1)
+
+int a = 0, b = 0;
+for(i=0; i<n; i++){
+    for(j=0; j<n; j++){
+       a = a + j;
+    }
+}
+for(k=0; k<n; k++){
+    b = b + k;
+}
+
+Ans) O(1)
+
+int a = 0;
+for(i=0; i<n; i++){
+    for(j=n; j<i; j--){
+       a = a + i + j;
+    }
+}
+
+Ans) O(1)
+
+array of fixed size will provide O(1) space complexity
+func(){
+  int arr[5]= {1,2,3,4,5}; -> space complexity - O(1)
+}
+
+vector -> variable size
+int n;
+cin>>n;
+vector<int>v(n); -> space complexity - O(n)
+
+two loop doesnot going to affect space complexity, it will
+going to affect time complexity(nested loop -> O(n^2))
+for(0-n){
+  vector<int>v(n){ -> space complexity - O(n)
+     for(0-n){
+     }
+  }
+}
+*/
