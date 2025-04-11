@@ -1,13 +1,20 @@
 # 🔗 Problem Link
 [Click here to read the problem](https://www.geeksforgeeks.org/problems/c-2-d-arrays0708/1?page=2&category=CPP&sortBy=submissions)
 
-vector<vector<int>> transpose(int a[][M], int n)
-{
+// Function to transpose a 2D array 'a' of size n x M
+vector<vector<int>> transpose(int a[][M], int n) {
+    // Create a result matrix of size M x n (rows become columns and vice versa)
     vector<vector<int>> result(M, vector<int>(n));
-    for(int i=0; i<n; i++){
-        for(int j=0; j<M; j++){
+    
+    // Loop through each element of the input array
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < M; j++) {
+            // Transpose logic: place element at [i][j] to [j][i] in result
             result[j][i] = a[i][j]; 
         }
     }
+    
+    // Return the transposed matrix
     return result;
 }
+
