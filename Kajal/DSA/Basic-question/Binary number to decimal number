@@ -1,18 +1,23 @@
 # 🔗 Problem Link
 [Click here to read the problem](https://www.geeksforgeeks.org/problems/binary-number-to-decimal-number3525/1?page=1&category=CPP&sortBy=submissions)
 
+// Define a class named Solution
 class Solution {
-  public:
+  public: // Public access specifier allows members to be accessed from outside the class
+
+    // Function to convert a binary string to its decimal equivalent
     int binaryToDecimal(string &b) {
-        int result = 0;
-        int power = 1;
-        
-        for(int i=b.size()-1; i>=0; i--){
-            if(b[i]=='1'){
-                result += power;
+        int result = 0;    // To store the final decimal result
+        int power = 1;     // Represents the current power of 2 (starting from 2^0)
+
+        // Iterate through the binary string from right to left (least significant bit to most)
+        for(int i = b.size() - 1; i >= 0; i--) {
+            if(b[i] == '1') {        // If the current bit is 1
+                result += power;     // Add the current power of 2 to the result
             }
-            power *= 2;
+            power *= 2; // Move to the next power of 2 (left shift in binary)
         }
-        return result;
+
+        return result; // Return the decimal result
     }
 };
