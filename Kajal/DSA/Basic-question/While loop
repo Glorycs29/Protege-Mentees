@@ -1,0 +1,15 @@
+https://www.geeksforgeeks.org/problems/while-loop/1?page=3&category=CPP&sortBy=submissions
+
+//User function Template for C++
+
+void utility(int x){
+   
+   //Write your code here
+   while(x>=0){
+       cout<<x<<" ";
+       x--;
+   }
+}
+
+Time Complexity: O(n)
+Auxiliary Space: O(1)
