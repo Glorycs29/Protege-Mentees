@@ -1,0 +1,82 @@
+https://www.geeksforgeeks.org/problems/sum-of-n-number/1?page=2&category=CPP&sortBy=submissions
+
+Method 1: Using Formula n * (n + 1) / 2
+//User function Template for C++
+
+int nSum(int n){
+    int ans = 0;
+
+    ans = n*(n+1)/2;
+
+    return ans;
+}
+Time Complexity: O(1)
+Space Complexity: O(1)
+
+
+Method 2: Using Loop (Iterative)
+Time Complexity: O(n)
+Space Complexity: O(1)
+
+cpp
+Copy
+Edit
+#include <iostream>
+using namespace std;
+
+int sumUsingLoop(int n) {
+    int sum = 0;
+    for(int i = 1; i <= n; ++i) {
+        sum += i;
+    }
+    return sum;
+}
+
+int main() {
+    int n = 10;
+    cout << "Sum using loop: " << sumUsingLoop(n) << endl;
+    return 0;
+}
+
+Method 3: Using Recursion
+Time Complexity: O(n)
+Space Complexity: O(n) (due to recursion stack)
+
+#include <iostream>
+using namespace std;
+
+int sumUsingRecursion(int n) {
+    if (n == 0) return 0;
+    return n + sumUsingRecursion(n - 1);
+}
+
+int main() {
+    int n = 10;
+    cout << "Sum using recursion: " << sumUsingRecursion(n) << endl;
+    return 0;
+}
+
+Method 4: Using STL accumulate with a vector (C++ STL way)
+Time Complexity: O(n)
+Space Complexity: O(n)
+
+cpp
+Copy
+Edit
+#include <iostream>
+#include <vector>
+#include <numeric>
+using namespace std;
+
+int sumUsingSTL(int n) {
+    vector<int> v(n);
+    for (int i = 0; i < n; ++i)
+        v[i] = i + 1;
+    return accumulate(v.begin(), v.end(), 0);
+}
+
+int main() {
+    int n = 10;
+    cout << "Sum using STL accumulate: " << sumUsingSTL(n) << endl;
+    return 0;
+}
