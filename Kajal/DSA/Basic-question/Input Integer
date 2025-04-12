@@ -1,0 +1,12 @@
+# 🔗 Problem Link
+[Click here to read the problem](https://www.geeksforgeeks.org/problems/input-integer/1?page=2&category=CPP&sortBy=submissions)
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+    cout<<n+10<<endl;
+    return 0;
+}
