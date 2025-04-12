@@ -1,0 +1,13 @@
+https://www.geeksforgeeks.org/problems/function-with-return-value/1?page=3&category=CPP&sortBy=submissions
+
+// User function Template for C++
+
+// Write the complete function returnValueFunction below
+// This function should take n as a parameter
+// return double of n
+int returnValueFunction(int n){
+    return n*2;
+}
+
+Time Complexity: O(1)
+Auxiliary Space: O(1)
