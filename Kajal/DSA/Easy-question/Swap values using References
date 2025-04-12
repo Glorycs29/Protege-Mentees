@@ -1,19 +1,16 @@
-#include <iostream>
-using namespace std;
+https://www.geeksforgeeks.org/problems/magic-in-cpp/1?page=3&category=CPP&sortBy=submissions
 
-// Function to swap using reference
-void swapNumbers(int &a, int &b) {
+// User function Template for C++
+
+// Function to swap A and B
+// using reference
+void swap(int &a, int &b) {
+
     int temp = a;
     a = b;
     b = temp;
+    
 }
 
-int main() {
-    int a, b;
-    cin >> a >> b;
-
-    swapNumbers(a, b);  // Passing by reference
-    cout << a << " " << b << endl;
-
-    return 0;
-}
+Time Complexity: O(1)
+Auxiliary Space: O(1)
