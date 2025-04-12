@@ -1,0 +1,27 @@
+https://www.geeksforgeeks.org/problems/c-data-types1523/1?page=3&category=CPP&sortBy=submissions
+
+class Solution {
+  public:
+    int cppIntType() {
+        int a;
+        cin>>a;
+        return a;
+    }
+    
+    char cppCharType() {
+        char b;
+        cin>>b;
+        return b;
+    }
+    
+    float cppFloatType() {
+        float c;
+        cin>>c;
+        return c;
+    }
+};
+
+Time Complexity: O(1)
+Auxiliary Space: O(1)
+
+ 
