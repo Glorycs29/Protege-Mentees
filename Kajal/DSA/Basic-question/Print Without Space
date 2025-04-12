@@ -1,0 +1,12 @@
+https://www.geeksforgeeks.org/problems/print-without-space/1?page=3&category=CPP&sortBy=submissions
+
+// User function Template for C++
+void utility() {
+    string a, b;
+    cin >> a >> b;
+    // Write your code below that prints ab
+    cout<<a<<b<<endl;
+}
+
+Time Complexity: O(1)
+Auxiliary Space: O(1)
