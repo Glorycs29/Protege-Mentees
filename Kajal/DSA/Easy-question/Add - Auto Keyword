@@ -1,0 +1,21 @@
+https://www.geeksforgeeks.org/problems/add-auto-keyword--141631/1?page=4&category=CPP&sortBy=submissions
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a;
+    float b;
+    long c;
+    cin >> a >> b >> c;
+
+    // add these variables into ans variable
+    float ans = a + b + c;
+
+    // printing the ans
+    cout << ans << endl;
+    return 0;
+}
+
+Time Complexity: O(1)
+Auxiliary Space: O(1)
