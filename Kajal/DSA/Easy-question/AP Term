@@ -1,0 +1,14 @@
+https://www.geeksforgeeks.org/problems/ap-term/1?page=3&category=CPP&sortBy=submissions
+
+// User function Template for C++
+
+int apTerm(int a, int d, int n) {
+    // Complete the code above
+    int ans = a + (n-1)*d;
+
+        // Complete the code above
+        return ans;
+}
+
+Time Complexity: O(1)
+Auxiliary Space: O(1)
