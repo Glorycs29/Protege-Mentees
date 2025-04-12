@@ -12,7 +12,7 @@ int main() {
     string sb = to_string(b);
     string concatenated = sa + sb;
 
-    int result = int(concatenated);
+    int result = stoi(concatenated);
 
     cout << result << endl;
 
