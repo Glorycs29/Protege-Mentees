@@ -1,0 +1,19 @@
+https://www.geeksforgeeks.org/problems/the-else-if-statement/1?page=4&category=CPP&sortBy=submissions
+
+// User function Template for C++
+
+void utility(int number) {
+    // Write the if, else if, else statements below
+    if(number>100){
+        cout<<"Big"<<endl;
+    }
+    else if(number<10){
+        cout<<"Small"<<endl;
+    }
+    else{
+        cout<<"Number"<<endl;
+    }
+}
+
+Time Complexity: O(1)
+Auxiliary Space: O(1)
