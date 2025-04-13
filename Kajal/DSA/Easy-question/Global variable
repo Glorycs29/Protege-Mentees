@@ -1,0 +1,17 @@
+https://www.geeksforgeeks.org/problems/global-variable--141631/1?page=4&category=CPP&sortBy=submissions
+
+#include <iostream>
+using namespace std;
+
+// declare a global variable g
+int g = 10;
+
+int main() {
+    // printing the value of global variable g
+    cout << g << endl;
+
+    return 0;
+}
+
+Time Complexity: O(1)
+Auxiliary Space: O(1)
