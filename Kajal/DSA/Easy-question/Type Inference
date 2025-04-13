@@ -1,0 +1,20 @@
+https://www.geeksforgeeks.org/problems/type-inference--141631/1?page=5&category=CPP&sortBy=submissions
+
+#include <iostream>
+#include <typeinfo>
+using namespace std;
+
+int main() {
+    int a = 3;
+    float b = 5.57;
+
+    // calculate typeid for variable a and b in variables id1 and id2.
+    string id1 = "i";
+    string id2 = "f";
+
+    // printing the typeid's
+    cout << id1 << " " << id2 << endl;
+}
+
+Time Complexity: O(1)
+Auxiliary Space: O(1)
