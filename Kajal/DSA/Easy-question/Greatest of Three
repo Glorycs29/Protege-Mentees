@@ -1,0 +1,21 @@
+https://www.geeksforgeeks.org/problems/greatest-of-three/1?page=4&category=CPP&sortBy=submissions
+
+//User function Template for C++
+
+int find_greatest_number(int a, int b, int c){
+    // Write your code here..
+    if(a>=b && a>c){
+        return a;
+    }
+    else{
+        if(b>a && b>c){
+            return b;
+       }
+       else{
+           return c;
+       }
+    } 
+}
+
+Time Complexity: O(1)
+Auxiliary Space: O(1)
