@@ -1,0 +1,18 @@
+https://www.geeksforgeeks.org/problems/print-geeksforgeeks--141629/1?page=4&category=CPP&sortBy=submissions
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    // Prints Hello World
+//    cout << "Hello World\n";
+
+    // Print GeeksforGeeks
+    cout << "GeeksForGeeks\n";
+
+    return 0;
+}
+
+Time Complexity: O(1)
+Auxiliary Space: O(1)
