@@ -1,0 +1,14 @@
+https://www.geeksforgeeks.org/problems/function-with-arguments-1605762259/1?page=4&category=CPP&sortBy=submissions
+
+// User function Template for C++
+
+// Write the complete argumentFunction below.
+// The function should take two arguments a and b
+// The function should return a+b
+// code here
+int argumentFunction(int a, int b){
+    return a+b;
+}
+
+Time Complexity: O(1)
+Auxiliary Space: O(1)
