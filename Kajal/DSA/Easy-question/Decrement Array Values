@@ -1,0 +1,18 @@
+https://www.geeksforgeeks.org/problems/decrement-array-values/1?page=5&category=CPP&sortBy=submissions
+
+// User function Template for C++
+
+int* decrementArrayElements(int arr[], int size) {
+    
+    int* result = new int[size];  // allocate memory for result array
+    
+    // write your code here
+    for(int i=0; i<size; i++){
+        result[i] = arr[i] - 1;   // decrement each element
+    }
+    
+    return result;  // return the array pointer
+}
+
+Time Complexity: O(n)
+Auxiliary Space: O(1)
