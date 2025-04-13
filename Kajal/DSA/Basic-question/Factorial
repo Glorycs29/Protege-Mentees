@@ -1,0 +1,16 @@
+https://www.geeksforgeeks.org/problems/factorial-1598335080/1?page=4&category=CPP&sortBy=submissions
+
+//User function Template for C++
+
+int nFactorial(int n){
+    int ans = 1;
+    
+    //Write your code here
+    for(int i=1; i<=n; i++){
+        ans = ans * i;
+    }
+    return ans;
+}
+
+Time Complexity: O(n)
+Auxiliary Space: O(1)
