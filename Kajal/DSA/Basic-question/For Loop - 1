@@ -1,0 +1,15 @@
+https://www.geeksforgeeks.org/problems/for-loop-1-1605617969/1?page=5&category=CPP&sortBy=submissions
+
+//User function Template for C++
+
+void utility(int n){
+    
+    //code here
+    //for loop to be added
+    for(int i=1; i<=10; i++){
+        cout<<n*i<<" ";
+    }
+}
+
+Time Complexity: O(1)
+Auxiliary Space: O(1)
