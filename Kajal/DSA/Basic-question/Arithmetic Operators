@@ -1,0 +1,22 @@
+https://www.geeksforgeeks.org/problems/arithmetic-operators-1605594922/1?page=5&category=CPP&sortBy=submissions
+
+// User function Template for C++
+
+void operations(int x, int y) {
+    // Perform addition x+y below
+    int p = x + y;
+        // Perform subtraction x-y below
+        int q = x - y;
+            // Perform multiplication x*y below
+        int r = x * y;
+            // Perform division x/y below
+        int s = x/y;
+            // Perform modulo operation x%y below
+        int t = x % y;
+
+            // The below code prints the output. Don't change it!
+        cout << p << " " << q << " " << r << " " << s << " " << t << endl;
+}
+
+Time Complexity: O(1)
+Auxiliary Space: O(1)
