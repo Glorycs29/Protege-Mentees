@@ -1,0 +1,16 @@
+https://www.geeksforgeeks.org/problems/array-traversal-reverse/1?page=4&category=CPP&sortBy=submissions
+
+//User function Template for C++
+
+void arrayTraversalReverse(int numbers[], int size){
+    //Write your code below
+    for(int i=(size-1); i>=0; i--){
+        cout<<numbers[i]<<" ";
+    }
+    
+    
+    //Don't add a new line as it is provided by the driver code
+}
+
+Time Complexity: O(n)
+Auxiliary Space: O(1)
