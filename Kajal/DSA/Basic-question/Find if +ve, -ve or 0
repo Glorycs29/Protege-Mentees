@@ -1,0 +1,22 @@
+https://www.geeksforgeeks.org/problems/find-if-ve-ve-or-0--141631/1?page=4&category=CPP&sortBy=submissions
+
+// User function Template for C++
+
+void fun(int a) {
+
+    // code here
+    if(a>0){
+        cout<<"Positive";
+    }
+    else{
+        if(a<0){
+            cout<<"Negative";
+        }
+        else{
+            cout<<"Zero";
+        }
+    }
+}
+
+Time Complexity: O(1)
+Auxiliary Space: O(1)
