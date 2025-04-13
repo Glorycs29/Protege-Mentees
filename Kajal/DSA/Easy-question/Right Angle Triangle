@@ -1,0 +1,17 @@
+https://www.geeksforgeeks.org/problems/right-angle-triangle-1605685807/1?page=4&category=CPP&sortBy=submissions
+
+//User function Template for C++
+
+void triangleWall(int s){
+    
+    //Write your code here
+    for(int i=0; i<s; i++){
+        for(int j=0; j<=i; j++){
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+}
+
+Time Complexity: O(n^2)
+Auxiliary Space: O(1)
