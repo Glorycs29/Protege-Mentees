@@ -1,0 +1,22 @@
+https://www.geeksforgeeks.org/problems/return-size--141631/1?page=4&category=CPP&sortBy=submissions
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x = 2;
+    double y = 3.5;
+    char z = 'g';
+
+    // store the size of the variables into a, b, c variables;
+    int a = sizeof(x);
+    int b = sizeof(y);
+    int c = sizeof(z);
+    
+    // printing the size of the variable x.
+    cout << a << " " << b << " " << c << endl;
+    return 0;
+}
+
+Time Complexity: O(1)
+Auxiliary Space: O(1)
