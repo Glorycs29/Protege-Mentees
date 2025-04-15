@@ -1,0 +1,225 @@
+/*#include<iostream>
+using namespace std;
+
+cin doesnot read " " space, "\t" tab and "\n" enter.
+if, else-if and else
+int main(){
+    int n;
+    cin>>n; //for input
+    cout<<"hello"<<endl;
+
+    cout<<"value of n is : "<<n<<endl;
+    int a;
+    cin>>a;
+
+    if a is positive
+    if(a>0){
+        cout<<"A is Positive"<<endl;
+    }
+    else{
+        cout<<"A is negative"<<endl;
+    }
+
+    int a,b;
+    cin>>a>>b;
+    cout<<"value of a and b is "<<a <<" "<<b <<endl;
+
+    int a,b;
+    a = cin.get();
+    when you give input as 1 
+    a = '1' -> 49 ASCII value
+    cout<<"value of a is : "<<a<<endl;
+
+    int a,b;
+
+    cout<<"Enter the value of a "<<endl;
+    cin>>a;
+    cout<<"Enter the value of b "<<endl;
+    cin>>b;
+
+    if(a>b){
+        cout<<"A is greater"<<endl;
+    }
+    if(b>a){
+        cout<<"B is greater"<<endl;
+    }
+
+    int a;
+    cin>>a;
+
+    cout<<"enter the value of a : "<<a<<endl;
+
+    First method
+    if(a>0){
+        cout<<"A is positive";
+    }
+    else{
+        if(a<0){
+            cout<<"A is negative";
+        }
+        else{
+            cout<<"A is 0";
+        }
+    }
+
+    Second method
+    if(a>0){
+        cout<<"A is positive";
+    }
+    else if(a<0){
+        cout<<"A is negative"<<endl;   
+    }
+    else{
+        cout<<"A is zero"<<endl;
+    }
+}
+
+Homework Questions
+Output Question
+
+#include<iostream>
+using namespace std;
+int main(){
+    int a = 9;
+    if(a==9){
+        cout<<"NINEY";
+    }
+    if(a>0){
+        cout<<"POSITIVE";
+    }
+    else{
+        cout<<"NEGATIVE";
+    }
+}
+
+Output: 
+NINEYPOSITIVE
+
+#include<iostream>
+using namespace std;
+int main(){
+    int a = 2;
+    int b = a + 1;
+
+    if((a=3)==b){   // 3==(2+1)
+        cout<<a;
+    }
+    else{
+        cout<<a+1;
+    }    
+}
+
+Output:
+3
+
+#include<iostream>
+using namespace std;
+int main(){
+    int a = 24;
+
+    if((a>20){ 
+        cout<<"Love";
+    }
+    else if(a==24){
+        cout<<"Lovely";
+    }
+    else{
+        cout<<"Babbar";
+    }
+    cout<<a;
+}
+    
+Output:
+LoveLovely
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    char ch;
+    cin>>ch;
+
+    if(ch>='a' && ch<='z'){
+        cout<<"This is Lowercase"<<endl; 
+    }
+    else if(ch>='A' && ch<='Z'){
+        cout<<"This is Uppercase"<<endl;
+    }
+    else if(ch>='0' && ch<='9'){
+        cout<<"This is numeric"<<endl;
+    }
+    else{
+        cout<<"This is a special character"<<endl;
+    }
+}
+*/
+
+/*while loop
+int main(){
+    int n;  n=4 -> Output: 1 2 3 4
+    cin>>n;
+    int i = 1;
+    while(i<=n){
+        cout<<i<<" ";
+        i += 1;
+    }
+
+    int n; // n=4 -> Output: 15
+    cin>>n;
+    int i = 1;
+    int sum = 0;
+    while(i<=n){
+        sum += i; // 1+2+3+4
+        i++;
+    }
+    cout<<"value of sum is "<<sum<<endl;
+
+Homework Question 
+    int n;
+    cin>>n;
+
+    int i=1, sum=0;
+    while(i<=n){
+        if(i%2==0){
+            sum += i;
+        }
+        i++;
+    }
+
+    cout<<"Sum of even numbers up to "<<n<<" is: "<< sum << endl;
+    return 0;
+
+    double fahrenheit, celsius; double is more accurate than float.
+    char choice;
+
+    while(choice == 'y' || choice == 'Y'){
+        cout<<"Enter temperature in Fahrenheit: ";
+        cin>>fahrenheit;
+        celsius = (fahrenheit - 32) * 5.0/9.0;
+        cout<<"Temperature in celsius: "<<celsius<<endl;
+        cout<<"Do you want to convert another? (y/n): ";
+        cin>>choice; 
+    }
+    cout<<"Thank you for using the converter!"<<endl;
+    return 0;
+    
+    int n;
+    cin>>n;
+
+    int i = 1;
+    while(i<=n){
+        if(i==1){
+            cout<<i<<" is not a Prime number"<<endl;
+        }
+        //divide hogaya, not prime
+        else{
+            if(n%i==0){
+            cout<<i<<" is not a Prime number"<<endl;
+            }
+            else{
+                cout<<i<<" is a Prime number"<<endl;
+            }
+        }
+        i++;
+    }        
+}*/
