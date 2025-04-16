@@ -1,0 +1,28 @@
+/*
+# Recursive Approach - Like Asking the Same Question Again and Again
+In recursion, a function calls itself with a smaller version of the problem each time. So for binary search:
+
+1). Look at the middle of the list.
+
+2). If that’s the number you’re looking for, you're done!
+
+3). If your number is smaller than the middle, search the left half.
+
+4). If it's greater, search the right half.
+
+5). Keep doing this by calling the function again with the new half.
+
+int binarySearchRecursive(int arr[], int low, int high, int target) {
+    if (low > high)
+        return -1;  // Base case: not found
+
+    int mid = low + (high - low) / 2;
+
+    if (arr[mid] == target)
+        return mid;  // Found
+    else if (arr[mid] < target)
+        return binarySearchRecursive(arr, mid + 1, high, target);  // Right half
+    else
+        return binarySearchRecursive(arr, low, mid - 1, target);  // Left half
+}
+*/
