@@ -1,0 +1,432 @@
+/* #include<iostream>
+using namespace std;
+
+pattern questions are rarely(not) asked in interviews but its 
+important for concept building.
+
+In patttern printing question, you have to make formula 
+using row(i), column(j) and n.
+
+if we take i as 1 then i<=n (e.g. : n=3 then i=1,2,3)
+if we take i as 0 then i<n (e.g. : n=3 then i=0,1,2)
+both are iterating 3 times.
+
+int main(){
+
+    int n;
+    cin>>n;
+
+    int i=1;
+
+    while(i<=n){
+
+        int j=1;
+        while(j<=n){
+            cout<<"*";
+            j++;
+        }
+        cout<<endl;
+        i++;
+    }
+
+    Output: n=2
+    **
+    **
+
+    int n;
+    cin>>n;
+    
+    int i=1;
+
+    while(i<=n){
+
+        int j=1;
+        while(j<=n){
+            cout<<i;
+            j++;
+        }
+        cout<<endl;
+        i++;
+    }
+
+    Output:
+    4
+    1111
+    2222
+    3333
+    4444
+   
+    int n;
+    cin>>n;
+    
+    int i=1;
+
+    while(i<=n){ // Ex: n=4 , 1<=4 -> code will run 4 times
+
+        int j=4;
+        while(j>=i){ // 4>=1
+            cout<<i;
+            j--;
+        }
+        cout<<endl;
+        i++;
+    }
+
+    Output:
+    4
+    1111
+    222
+    33
+    4
+    
+    int n;
+    cin>>n;
+
+    int i=1;
+
+    while(i<=n){ // Ex: n=4 , 1<=4 -> code will run 4 times
+
+        int j=1;
+        while(j<=n){ 
+            cout<<j<<" ";
+            j++;
+        }
+        cout<<endl;
+        i++;
+    }
+
+    Output:
+    4
+    1 2 3 4
+    1 2 3 4
+    1 2 3 4
+    1 2 3 4
+
+    int n;
+    cin>>n;
+
+    int i=1;
+
+    while(i<=n){ // Ex: n=4 , 1<=4 -> code will run 4 times
+
+        int j=1;
+        while(j<=n){ 
+            cout<<n-j+1<<" ";
+            j++;
+        }
+        cout<<endl;
+        i++;
+    }
+
+    Output:
+    4
+    4 3 2 1
+    4 3 2 1
+    4 3 2 1
+    4 3 2 1
+    
+    int n;
+    cin>>n;
+
+    int i=1, count=1; //Taking a variable count to solve this pattern
+
+    while(i<=n){ // Ex: n=3 , 1<=3 -> code will run 3 times
+
+        int j=1;
+        while(j<=n){ 
+            cout<<count<<" ";
+            count++;
+            j++;
+        }
+        cout<<endl;
+        i++;
+    }
+
+    Output:
+    3
+    1 2 3
+    4 5 6
+    7 8 9
+
+    int n;
+    cin>>n;
+
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=i; j++){
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+
+    Output:
+    3
+    *
+    * *
+    * * *
+
+    int n;
+    cin>>n;
+
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=i; j++){
+            cout<<i<<" ";
+        }
+        cout<<endl;
+    }
+
+    Output:
+    3
+    1
+    2 2
+    3 3 3
+
+    int n, count=1;
+    cin>>n;
+
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=i; j++){
+            cout<<count<<" ";
+            count++;
+        }
+        cout<<endl;
+    }
+
+    Output:
+    4
+    1
+    2 3
+    4 5 6
+    7 8 9 10
+
+    Using a variable 
+    int n;
+    cin>>n;
+
+    for(int i=1; i<=n; i++){
+        int count=i;
+        for(int j=1; j<=i; j++){
+            cout<<count<<" ";
+            count++;
+        }
+        cout<<endl;
+    }
+
+    Output:
+    4
+    1
+    2 3
+    3 4 5
+    4 5 6 7
+
+    Without using a variable
+    int n;
+    cin>>n;
+
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=i; j++){
+            cout<<i+j-1<<" ";
+        }
+        cout<<endl;
+    }
+
+    Output:
+    4
+    1
+    2 3
+    3 4 5
+    4 5 6 7
+
+    Without using a variable
+    int n;
+    cin>>n;
+
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=i; j++){
+            cout<<i-j+1<<" ";
+        }
+        cout<<endl;
+    }
+    you can also do this question using a variable(count)
+
+    Output:
+    4
+    1
+    2 1
+    3 2 1
+    4 3 2 1
+
+    int n;
+    cin>>n;
+
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=n; j++){
+            char ch = 'A'+i-1;
+            cout<<ch<<" ";
+        }
+        cout<<endl;
+    }
+
+    Output:
+    3
+    A A A
+    B B B
+    C C C
+
+    int n;
+    cin>>n;
+
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=n; j++){
+            char ch = 'A'+j-1;
+            cout<<ch<<" ";
+        }
+        cout<<endl;
+    }
+
+    Output:
+    3
+    A B C
+    A B C
+    A B C
+
+    int n;
+    cin>>n;
+
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n; j++){
+            cout<<char('A'+i*n+j)<<" ";
+        }
+        cout<<endl;
+    }
+
+    Output:
+    3
+    A B C
+    D E F
+    G H I
+
+    int n;
+    cin>>n;
+
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=n; j++){
+            cout<<char('A'+(i+j-1)-1)<<" ";
+        }
+        cout<<endl;
+    }
+
+    Output:
+    3
+    A B C
+    B C D
+    C D E
+
+    int n;
+    cin>>n;
+
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=i; j++){
+            cout<<char('A'+i-1)<<" ";
+        }
+        cout<<endl;
+    }
+
+    Output:
+    3
+    A
+    B B
+    C C C
+
+    int n;
+    cin>>n;
+
+    char ch = 'A';
+
+    for(int i=0; i<n; i++){
+        for(int j=0; j<=i; j++){
+            cout<<ch<<" ";
+            ch++;
+        }
+        cout<<endl;
+    }
+
+    Output:
+    4
+    A
+    B C
+    D E F
+    G H I J
+
+    int n;
+    cin>>n;
+
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=i; j++){
+            cout<<char('A'+(i+j-2))<<" ";
+        }
+        cout<<endl;
+    }
+
+    Output:
+    4
+    A
+    B C
+    C D E
+    D E F G
+
+    int n;
+    cin>>n;
+
+    for(int i=1; i<=n; i++){
+        char ch = 'A'+(n-i);
+        for(int j=1; j<=i; j++){
+            cout<<ch<<" ";
+            ch++;
+        }
+        cout<<endl;
+    }
+
+    Output:
+    4
+    D
+    C D
+    B C D
+    A B C D
+
+    int n;
+    cin>>n;
+
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=(n-i); j++){
+            cout<<" ";
+        }    
+        for(int k=1; k<=i;k++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+
+    Output:
+    4
+       *
+      **
+     ***
+    ****
+
+    int n;
+    cin>>n;
+
+    for(int i=n; i>=1; i--){
+        for(int j=1; j<=i; j++){
+            cout<<"*";
+        } 
+        cout<<endl;
+    }
+
+    Output:
+    4
+    ****
+    ***
+    **
+    *
+} */
