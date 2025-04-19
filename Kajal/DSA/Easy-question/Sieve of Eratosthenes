@@ -1,0 +1,47 @@
+// User function Template for C++
+class Solution {
+  public:
+    // Function to return all prime numbers up to 'n'
+    vector<int> sieveOfEratosthenes(int n) {
+        // Step 1: Initialize a boolean array "prime[0..n]" and set all entries as true.
+        // A value in prime[i] will finally be false if i is not a prime, else true.
+        vector<bool> prime(n + 1, true); 
+        
+        // Step 2: 0 and 1 are not prime numbers
+        prime[0] = prime[1] = false;
+
+        // Step 3: Start marking multiples of primes as false (not prime)
+        for (int p = 2; p * p <= n; p++) {
+            // If prime[p] is still true, it is a prime
+            if (prime[p] == true) {
+                // Mark all multiples of p as false starting from p*p
+                for (int i = p * p; i <= n; i += p) {
+                    prime[i] = false;
+                }
+            }
+        }
+
+        // Step 4: Collect all prime numbers in the result vector
+        vector<int> result;
+        for (int p = 2; p <= n; p++) {
+            if (prime[p]) {
+                result.push_back(p);
+            }
+        }
+
+        // Return the list of prime numbers
+        return result;
+    }
+};
+
+Time Complexity:
+The outer loop runs from 2 to √n, and the inner loop marks multiples of each prime.
+Each number is marked as non-prime at most once by its smallest prime factor.
+
+→ Overall Time Complexity: O(n log log n)
+
+Space Complexity:
+We use a vector<bool> of size n+1 to keep track of primality.
+An additional vector result stores the primes found (at most n elements).
+
+→ Overall Space Complexity: O(n)
