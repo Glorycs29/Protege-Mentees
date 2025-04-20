@@ -1,0 +1,58 @@
+class Solution { 
+public:
+    vector<int> searchRange(vector<int>& nums, int target) {
+        int n = nums.size();
+        int start = 0, end = n - 1;
+        int mid;
+        vector<int> result(2, -1);  // Initialize result to [-1, -1]
+
+        // 🔍 Step 1: Find the first occurrence of the target
+        while (start <= end) {
+            mid = (start + end) / 2;
+
+            // If current element is greater or equal, move left
+            if (target <= nums[mid]) {
+                end = mid - 1;
+            } else {
+                start = mid + 1;
+            }
+
+            // If target is found, record it (we keep looking for earlier occurrence)
+            if (nums[mid] == target) {
+                result[0] = mid;
+            }
+        }
+
+        // 🔍 Step 2: Find the last occurrence of the target
+        start = 0;
+        end = n - 1;
+
+        while (start <= end) {
+            mid = (start + end) / 2;
+
+            // If current element is less than or equal, move right
+            if (target >= nums[mid]) {
+                start = mid + 1;
+            } else {
+                end = mid - 1;
+            }
+
+            // If target is found, record it (we keep looking for later occurrence)
+            if (nums[mid] == target) {
+                result[1] = mid;
+            }
+        }
+
+        return result;  // Return the [first, last] positions or [-1, -1]
+    }
+};
+
+Time Complexity
+Each binary search (while loop) runs in O(log n) time.
+Total of 2 binary searches → O(log n) + O(log n) = O(log n)
+Time Complexity: O(log n)
+
+Space Complexity
+No extra data structures used except for the result vector of size 2.
+Space used is constant regardless of input size.
+Space Complexity: O(1)
