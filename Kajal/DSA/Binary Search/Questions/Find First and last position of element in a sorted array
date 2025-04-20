@@ -6,7 +6,7 @@ public:
         int mid;
         vector<int> result(2, -1);  // Initialize result to [-1, -1]
 
-        // 🔍 Step 1: Find the first occurrence of the target
+        //Step 1: Find the first occurrence of the target
         while (start <= end) {
             mid = (start + end) / 2;
 
@@ -23,7 +23,7 @@ public:
             }
         }
 
-        // 🔍 Step 2: Find the last occurrence of the target
+        //Step 2: Find the last occurrence of the target
         start = 0;
         end = n - 1;
 
