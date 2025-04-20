@@ -1,0 +1,34 @@
+class Solution { 
+public:
+    int peakIndexInMountainArray(vector<int>& arr) {
+        int n = arr.size();
+        int start = 0, end = n - 1;
+        int mid;
+
+        // Binary search to find the peak element
+        while (start < end) {
+            mid = (start + end) / 2;
+
+            // If mid element is less than next element,
+            // we are in the increasing part of the mountain
+            // so move start to mid + 1
+            if (arr[mid] < arr[mid + 1]) {
+                start = mid + 1;
+            }
+            // Otherwise, we are in the decreasing part,
+            // and the peak could be at mid or to the left
+            else {
+                end = mid;
+            }
+        }
+
+        // When start == end, we've found the peak index
+        return start;
+    }
+};
+
+Time Complexity: O(log n)
+Binary search is applied, cutting the search space in half each time.
+
+Space Complexity: O(1)
+No extra space used — only a few integer variables.
