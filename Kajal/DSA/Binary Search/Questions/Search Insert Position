@@ -1,0 +1,37 @@
+class Solution { 
+public:
+    // Function to find the index where 'target' should be inserted in sorted array 'nums'
+    int searchInsert(vector<int>& nums, int target) {
+        int n = nums.size();
+        int start = 0, end = n - 1;
+
+        // Binary search loop
+        while (start <= end) {
+            // To prevent potential overflow
+            int mid = start + (end - start) / 2;
+
+            // If the middle element is the target, return its index
+            if (nums[mid] == target) {
+                return mid;
+            }
+
+            // If target is greater, ignore the left half
+            if (nums[mid] < target) {
+                start = mid + 1;
+            }
+            // If target is smaller, ignore the right half
+            else {
+                end = mid - 1;
+            }
+        }
+
+        // If not found, 'start' is the correct insert position
+        return start;
+    }
+};
+
+Time Complexity:
+O(log n) — Because this uses binary search, the search space is halved in each iteration.
+
+Space Complexity:
+O(1) — No extra space is used apart from a few variables.
