@@ -1,0 +1,32 @@
+#include <vector>
+#include <unordered_set>
+using namespace std;
+
+class Solution {
+public:
+    vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
+        unordered_set<int> set1(nums1.begin(), nums1.end()); // store elements of nums1
+        unordered_set<int> result; // to store unique intersection
+
+        for (int num : nums2) {
+            if (set1.count(num)) {  // if num exists in set1
+                result.insert(num); // add to result
+            }
+        }
+
+        // Convert the result set to a vector
+        return vector<int>(result.begin(), result.end());
+    }
+};
+
+Time Complexity: O(m + n)
+where m = nums1.size(), n = nums2.size()
+O(m) to insert all elements of nums1 into set
+O(n) to check each element of nums2
+
+Space Complexity: O(m + n)
+Extra space used by set1 and result.
+
+Hash sets give O(1) average time lookup and insertion.
+This approach handles duplicates automatically since sets don't allow duplicate elements.
+The output can be any order unless otherwise specified.
