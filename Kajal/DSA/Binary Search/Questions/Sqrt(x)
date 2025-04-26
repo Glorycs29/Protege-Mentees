@@ -1,0 +1,39 @@
+class Solution {
+public:
+    int mySqrt(int x) {
+        // Special case: sqrt(0) = 0, sqrt(1) = 1
+        if (x == 0 || x == 1) return x;
+
+        int start = 0, end = x;
+        int ans = 0; // To store the closest integer sqrt value
+
+        // Binary Search between start and end
+        while (start <= end) {
+            int mid = (start + end) / 2;
+
+            // Use long long to avoid overflow when multiplying mid * mid
+            if ((long long)mid * mid == x) {
+                // If mid*mid equals x, mid is the exact square root
+                return mid;
+            }
+            else if ((long long)mid * mid < x) {
+                // If mid*mid is less than x, move right
+                ans = mid;         // Update ans to current mid
+                start = mid + 1;
+            }
+            else {
+                // If mid*mid is greater than x, move left
+                end = mid - 1;
+            }
+        }
+
+        // If no exact square root found, return the floor value (ans)
+        return ans;
+    }
+};
+
+Time Complexity: O(log x)
+Because we're doing binary search between 0 and x, reducing the search space by half each time.
+
+Space Complexity: O(1)
+No extra space used except for a few variables.
