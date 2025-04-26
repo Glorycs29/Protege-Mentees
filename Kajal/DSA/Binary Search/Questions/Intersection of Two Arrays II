@@ -1,0 +1,34 @@
+#include <vector>
+#include <unordered_map>
+using namespace std;
+
+class Solution {
+public:
+    vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
+        unordered_map<int, int> freq; // Map to store frequency of elements in nums1
+        vector<int> result; // Vector to store the intersection result
+
+        // Count the frequency of each element in nums1
+        for (int num : nums1) {
+            freq[num]++;
+        }
+
+        // Check elements in nums2
+        for (int num : nums2) {
+            if (freq[num] > 0) {
+                result.push_back(num); // Add to result
+                freq[num]--;            // Decrement the count
+            }
+        }
+
+        return result;
+    }
+};
+
+Time Complexity: O(m + n)
+where m = nums1.size() and n = nums2.size()
+O(m) to build the frequency map
+O(n) to check and build the result
+
+Space Complexity: O(min(m, n))
+In the worst case, the frequency map stores all elements from the smaller array.
