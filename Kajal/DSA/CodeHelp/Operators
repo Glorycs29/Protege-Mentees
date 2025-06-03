@@ -1,0 +1,244 @@
+/* #include<iostream>
+using namespace std;
+
+int main(){
+    
+    //Bitwise Operator
+    int a = 4; // 100
+    int b = 6; // 110
+
+    cout<<" a&b "<< (a&b) << endl; //AND
+    cout<<" a|b "<< (a|b) << endl; //OR
+    cout<<" ~a "<< ~a << endl; //NOT
+    cout<<" a^b "<< (a^b) << endl; //XOR
+
+    cout<< (17>>1)<<endl; //right shift
+    cout<< (17>>2)<<endl;
+    cout<< (19<<1)<<endl; //left shift
+    cout<< (21<<2)<<endl;
+
+    int i = 7;
+    cout<<(++i)<<endl; //8 (pre increament)
+    cout<<(i++)<<endl; //8 (post increament)
+    cout<<(i--)<<endl; //9 (post decreament)
+    cout<<(--i)<<endl; //7 (pre decreament)
+
+    //For loop
+    int n;
+    cout<<" enter the value of n" <<endl;
+    cin >> n;
+
+    cout<<"printing count from 1 to n"<< endl;
+
+    for(int i = 1; i<=n; i++){
+        cout<< i << endl;
+    }
+     
+    //Output:
+    5
+    printing count from 1 to n
+    1
+    2
+    3
+    4
+    5
+
+    //infinite loop
+    int i = 1;
+    for(; ; ){
+       if(i<=n){
+          cout<< i << endl;
+       }
+       else{
+           break;
+       }
+       i++;   
+    }
+
+    //using multiple variable
+    for(int a=0, b=1, c=2; a>=0 && b>=1 && c>=2; a--,b--,c--){
+       cout<<a<<" "<<b<<" "<<c<<endl;
+    }
+
+    //Sum from 1 to n
+    int sum = 0;
+    for(int i=1; i<=n; i++){
+       //sum = sum + 1;
+       sum +=1;
+    }
+     
+    cout<<sum<<endl;
+
+   // Fibonacci Series 
+   The Fibonacci series is a sequence of numbers where each 
+   number is the sum of the two preceding ones, starting from 0 and 1. 
+   
+   Example
+   0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
+   0 + 1 = 1
+   1 + 1 = 2
+   1 + 2 = 3
+   2 + 3 = 5
+
+Code   
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, first = 0, second = 1, next;
+
+    cout << "Enter the number of terms: ";
+    cin >> n;
+
+    cout << "Fibonacci Series: ";
+    for (int i = 0; i < n; i++) {
+        cout << first << " ";
+        next = first + second;
+        first = second;
+        second = next;
+    }
+
+    return 0;
+}
+
+// Prime Number
+A prime number is a natural number greater than 1 that has exactly two factors: 1 and itself.
+
+Examples:
+Prime numbers: 2, 3, 5, 7, 11, 13, 17...
+Not prime: 1 (only one factor), 4 (factors: 1, 2, 4)
+
+Code
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, i, isPrime = 1;
+
+    cout << "Enter a number: ";
+    cin >> n;
+
+    if (n <= 1) {
+        isPrime = 0;
+    } else {
+        for (i = 2; i <= n / 2; i++) {
+            if (n % i == 0) {
+                isPrime = 0;
+                break;
+            }
+        }
+    }
+
+    if (isPrime)
+        cout << n << " is a prime number.";
+    else
+        cout << n << " is not a prime number.";
+
+    return 0;
+}
+
+// Break statement
+The break statement in C++ is used to exit a loop (for, while, do-while) or a switch statement immediately, even if the condition is still true.
+
+code
+#include <iostream>
+using namespace std;
+
+int main() {
+    for (int i = 1; i <= 10; i++) {
+        if (i == 5)
+            break;  // exits the loop when i is 5
+        cout << i << " ";
+    }
+    return 0;
+}
+
+Output
+1 2 3 4
+
+// Continue statement
+The continue statement skips the current iteration of a loop and moves to the next iteration, without exiting the loop.
+
+Code
+#include <iostream>
+using namespace std;
+
+int main() {
+    for (int i = 1; i <= 5; i++) {
+        if (i == 3)
+            continue;  // skips printing when i is 3
+        cout << i << " ";
+    }
+    return 0;
+}
+
+Output
+1 2 4 5
+
+// Scope of variable
+The scope of a variable refers to the region of the program where the variable is declared and accessible. In C++, common scopes include:
+Local scope (inside functions or blocks)
+Global scope (outside all functions)
+
+Code
+#include <iostream>
+using namespace std;
+
+int globalVar = 100;  // Global scope
+
+int main() {
+    int localVar = 10;  // Local to main()
+    
+    if (true) {
+        int blockVar = 20;  // Local to this block only
+        cout << "Inside block: " << blockVar << endl;
+    }
+
+    // cout << blockVar;  // ❌ Error: blockVar not accessible here
+
+    cout << "Local variable: " << localVar << endl;
+    cout << "Global variable: " << globalVar << endl;
+
+    return 0;
+}
+
+ Explanation:
+globalVar: Accessible anywhere in the program.
+localVar: Only accessible within main().
+blockVar: Only accessible inside the if block where it is declared.
+
+// Operator precedence
+Operator precedence determines the order in which operators are evaluated in an expression. Operators with higher precedence are evaluated before 
+those with lower precedence.
+
+🔹 Common Precedence Order (High to Low):
+Precedence	Operators	Description
+1 (High)	()	Parentheses
+2	++, --, !, - (unary)	Increment, Decrement, Not
+3	*, /, %	Multiplication, Division
+4	+, -	Addition, Subtraction
+5	<, >, <=, >=	Relational operators
+6	==, !=	Equality operators
+7	&&	Logical AND
+8	`	
+9 (Low)	=, +=, -=	Assignment operators
+
+// Code
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 10, b = 5, c = 2;
+    int result = a - b * c;  // * has higher precedence than -
+
+    cout << "Result: " << result << endl;  // Output: 0
+    return 0;
+}
+
+🔹 Explanation:
+b * c is evaluated first → 5 * 2 = 10
+Then a - 10 → 10 - 10 = 0
+
+
+
+}*/
