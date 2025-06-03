@@ -1,0 +1,94 @@
+/* 
+// Convert decimal number to binary number
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int decimal;
+
+    // Ask the user to enter a decimal number
+    cout << "Enter a decimal number: ";
+    cin >> decimal;
+
+    // Vector to store binary digits
+    vector<int> binary;
+
+    // Special case if the input number is 0
+    if (decimal == 0) {
+        cout << "Binary: 0" << endl;
+        return 0;
+    }
+
+    // Convert decimal to binary
+    while (decimal > 0) {
+        int remainder = decimal % 2;     // Get remainder (0 or 1)
+        binary.push_back(remainder);     // Store the bit
+        decimal = decimal / 2;           // Update decimal number
+    }
+
+    // Binary digits are stored in reverse order
+    cout << "Binary: ";
+    for (int i = binary.size() - 1; i >= 0; i--) {
+        cout << binary[i];
+    }
+    cout << endl;
+
+    return 0;
+}
+
+// Convert Binary number to Decimal number
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int main() {
+    string binary;
+    int decimal = 0;
+
+    // Ask the user to enter a binary number
+    cout << "Enter a binary number: ";
+    cin >> binary;
+
+    // Convert binary to decimal
+    int length = binary.length();
+    for (int i = 0; i < length; i++) {
+        // Get the digit from the left (most significant bit)
+        char bit = binary[length - 1 - i];
+
+        if (bit == '1') {
+            // If the bit is 1, add 2^i to the decimal result
+            decimal += pow(2, i);
+        } else if (bit != '0') {
+            // Handle invalid input
+            cout << "Invalid binary number!" << endl;
+            return 1;
+        }
+    }
+
+    // Print the decimal equivalent
+    cout << "Decimal: " << decimal << endl;
+
+    return 0;
+}
+
+// Decimal to Binary
+#include <iostream>
+#include <bitset>
+using namespace std;
+
+int main() {
+    int num;
+
+    // Ask the user to enter a number (can be negative)
+    cout << "Enter an integer: ";
+    cin >> num;
+
+    // Display as 8-bit binary using two's complement
+    // Use 8, 16, or 32 bits depending on how many bits you want
+    cout << "Binary (8-bit two's complement): " << bitset<8>(num) << endl;
+
+    return 0;
+}
+*/
