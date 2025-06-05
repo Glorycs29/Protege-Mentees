@@ -1,0 +1,322 @@
+/*
+// Example of Switch statement
+#include<iostream>
+using namespace std;
+
+int main(){
+    int num = 2;
+    cout<<end;
+    switch(num){
+        case 1: cout<<"First"<<endl;
+                break;
+        case 2: cout<<"Second"<<endl;
+                break;
+        default: cout<<" It is default case"<<endl;                
+    }
+}
+
+#include<iostream>
+using namespace std;
+
+int main() {
+    
+    char ch = '1';
+    int num = 1;
+
+    cout << endl;
+    switch( 2*num ) {
+
+        case 2: cout << "First" <<endl;
+                cout << " First again " <<endl;
+                break;
+
+        case '1': switch(num) {
+                    case 1: cout<<" Value of num is "<< num <<endl;
+                    break;
+                 }
+                break;
+
+        default: cout << " It is default case" <<endl;        
+
+    }
+
+    cout << endl;
+
+    return 0;
+}
+    
+// Calculator
+#include<iostream>
+using namespace std;
+
+int main() {
+    
+    int a, b;
+
+    cout <<" Enter the value of a "<<endl;
+    cin >> a;
+
+    cout<<" Enter the value of b " <<endl;
+    cin >> b;
+
+    char op;
+    cout<<" Enter the Operation you want to perform" <<endl;
+    cin >> op;
+
+    switch( op ) {
+
+        case '+':  cout << (a+b) <<endl; 
+                  break;
+
+        case '-': cout<< (a-b) <<endl;
+                  break;  
+
+        case '*': cout<< (a*b) <<endl;
+                  break;
+
+        case '/': cout<< (a/b) <<endl;
+                  break;
+
+        case '%': cout<< (a%b) <<endl;
+                  break;
+
+        default: cout << "Please enter a valid Operation " << endl;
+
+    }
+  
+
+    return 0;
+}
+
+//Function
+
+#include<iostream>
+using namespace std;
+
+int main() {
+
+    // pow(a,b)
+
+    int a , b;
+
+    cin >> a >> b;
+
+    int ans = 1;
+
+    for(int i = 1; i<=b; i++) {
+        ans = ans * a;
+    }
+
+    cout<<" answer is " << ans <<endl;
+
+
+    int c , d;
+
+    cin >> c >> d;
+
+    ans = 1;
+
+    for(int i = 1; i<=d; i++) {
+        ans = ans * c;
+    }
+
+    cout<<" answer is " << ans <<endl;
+
+    int e , f;
+
+    cin >> e >> f;
+
+    ans = 1;
+
+    for(int i = 1; i<=f; i++) {
+        ans = ans * e;
+    }
+
+    cout<<" answer is " << ans <<endl;
+
+
+    return 0;
+}
+
+//Counting Program
+
+#include<iostream>
+using namespace std;
+
+//Function Signature
+void printCounting(int num) {
+
+//    cout << n << endl;
+    //Function Body 
+    for(int i=1; i<=num; i++) {
+        cout<< i << " ";
+    }
+    cout<<endl;
+}
+
+int main() {
+
+    int n;
+    cin >> n;
+
+    //function Call
+    printCounting(n);
+
+
+    return 0;
+}
+
+//Checking the number is even or odd
+
+#include<iostream>
+using namespace std;
+
+
+//1 -> Even
+// 0 -> odd
+bool isEven(int a) {
+    //odd
+    if(a&1) {
+        return 0;
+    }
+    else { //Even
+        return 1;
+    }
+
+}
+
+int main() {
+    
+    int num;
+    cin >> num;
+
+    if(isEven(num)) {
+        cout <<" Number is Even" <<endl;
+    }
+    else {
+        cout<< " Number is Odd" <<endl;
+    }
+
+
+    return 0;
+}
+
+//nCr Program
+
+#include<iostream>
+using namespace std;
+
+int factorial(int n) {
+
+    int fact = 1;
+
+    for(int i = 1; i<=n; i++ ) {
+        fact = fact * i;
+    }
+
+    return fact;
+}
+
+int nCr(int n, int r) {
+
+    int num = factorial(n);
+
+    int denom = factorial(r) * factorial(n-r);
+
+    return num/denom;
+}
+
+
+int main( ) {
+
+    int n, r;
+
+    cin>> n >> r ;
+
+    cout <<" Answer is " << nCr(n,r) << endl;
+
+    return 0;
+}
+
+//Pass By Value
+
+#include<iostream>
+using namespace std;
+
+void dummy(int n ) {
+    n++;
+    cout << " n is " << n <<endl;
+
+}
+
+int main() {
+
+    int n;
+    cin >> n;
+
+    dummy(n);
+
+    cout<<"number n is "<< n << endl;
+
+
+    return 0;
+}
+
+//Power Program
+
+#include<iostream>
+using namespace std;
+
+int power(int num1, int num2) {
+    
+    //cout << a <<endl;
+
+    int ans = 1;
+
+    for(int i = 1; i <= num2; i++) {
+        ans = ans * num1;
+    }
+
+    return ans;
+}
+int main()
+{
+    int c , d;
+    cin>> c >> d;
+
+    int answer = power(c,d);
+    cout << " answer is " << answer << endl;
+
+    return 0;
+}
+
+//Prime number or not
+
+#include<iostream>
+using namespace std;
+// 0 -> Not a Prime no.
+// 1 -> Prime no.
+
+bool isPrime(int n ) {
+   for(int i = 2; i < n; i++){
+       if(n % i == 0) {
+       //divide hogya h , not a prime no.
+          return 0;
+        }
+   }
+   return 1;
+}
+
+int main() {
+   
+   int n ;
+   cin >> n;
+   if(isPrime(n)) {
+        cout <<" is a Prime number " <<endl;
+   }
+   else{
+       cout<< "Not a prime number "<<endl;
+
+   }
+}
+*/
