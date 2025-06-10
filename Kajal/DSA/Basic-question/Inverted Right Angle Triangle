@@ -1,0 +1,14 @@
+https://www.geeksforgeeks.org/problems/inverted-right-angletriangle-1605691171/1?page=5&category=CPP&sortBy=submissions
+
+// User function Template for C++
+
+void invTriangleWall(int s) {
+
+    // Write your code here
+    for(int i=0; i<s; i++){
+        for(int j=0; j<s-i; j++){ // j should depend on i for decreasing
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+}
