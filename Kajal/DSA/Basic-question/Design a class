@@ -1,0 +1,12 @@
+https://www.geeksforgeeks.org/problems/design-a-class/1?page=5&category=CPP&sortBy=submissions
+
+// User function Template for C++
+
+// Design a class as described in the question
+// Code here
+class MyClass{
+public:
+    void display(){
+        cout<<"Hello World"<<endl;
+    }
+};    
