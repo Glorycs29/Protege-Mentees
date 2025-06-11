@@ -1,0 +1,16 @@
+https://www.geeksforgeeks.org/problems/count-digits-1606889545--123832/1?page=10&category=CPP&sortBy=submissions
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    // code here
+    int n;
+    cin>>n;
+    int count=0;
+    while(n!=0){
+        count++;
+        n = n/10;
+    }
+    cout<<count<<endl;
+}
