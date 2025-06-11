@@ -1,0 +1,9 @@
+https://www.geeksforgeeks.org/problems/print-geeksforgeeks-with-quotes--141631/1?page=4&category=CPP&sortBy=submissions
+
+// User function Template for C++
+
+void print() {
+
+    // code here
+    cout<<"\"GeeksForGeeks\""<<endl; //Use backslash 
+}
