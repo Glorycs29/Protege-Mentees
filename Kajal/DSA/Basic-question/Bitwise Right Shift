@@ -1,0 +1,14 @@
+https://www.geeksforgeeks.org/problems/bitwise-right-shift--140107/1?page=10&category=CPP&sortBy=submissions
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b;
+    cin >> a >> b;
+
+    // perform right shift here
+    int result = a>>b;
+    cout<<result<<endl;
+    return 0;
+}
