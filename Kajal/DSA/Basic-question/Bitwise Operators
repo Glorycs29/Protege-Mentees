@@ -1,0 +1,19 @@
+https://www.geeksforgeeks.org/problems/bitwise-operators-1597314674--135255/1?page=7&category=CPP&sortBy=submissions
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, c;
+    cin >> a >> b >> c;
+
+    // perform bitwise operations here
+    int d = a ^ a;
+    int e = c ^ b;
+    int f = a & b;
+    int g = c|(a^a);
+    e = ~e;
+    cout<<d<<" "<<e<<" "<<f<<" "<<g;
+
+    return 0;
+}
