@@ -1,0 +1,11 @@
+https://www.geeksforgeeks.org/problems/ap-term--150919/1?page=8&category=CPP&sortBy=submissions
+
+class Solution {
+  public:
+    int nthTerm(int a, int d, int n) {
+        // code here
+        int p = (n-1)*d;
+        int ap = a+p;
+        return ap;
+    }
+};
