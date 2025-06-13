@@ -1,0 +1,19 @@
+https://www.geeksforgeeks.org/problems/average-of-positives/1?page=10&category=CPP&sortBy=submissions
+
+// User function Template for C
+
+double posAverage(int numbers[], int size) {
+
+    // Write your code to find average of positive numbers in numbers array
+    // return the answer
+    int sum = 0, count = 0;
+    for(int i=0; i<size; i++){
+        if(numbers[i]>-1){
+            sum = sum + numbers[i];
+            count++;
+        }
+    }
+    if(count==0) return 0.0; //Avoid division by zero
+    return (double)sum / count; //Proper floating point division
+    
+}
