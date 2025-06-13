@@ -1,0 +1,12 @@
+https://www.geeksforgeeks.org/problems/gcd/1?page=3&category=CPP&sortBy=submissions
+
+// User function Template for C++
+
+int gcd(int a, int b) {
+    while(b!=0){
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
