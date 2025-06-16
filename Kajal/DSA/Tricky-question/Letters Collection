@@ -1,0 +1,37 @@
+https://www.geeksforgeeks.org/problems/c-letters-collection4552/1?page=2&category=CPP&sortBy=submissions
+
+// User function Template for C++
+
+class Solution {
+  public:
+    vector<int> matrixSum(int n, int m, vector<vector<int>> mat, int q,
+                          vector<int> queries[]) {
+        // code here
+        vector<int> result;
+        
+        
+        
+        vector<pair<int, int>> onehop = {{-1,-1},{-1,0},{-1,1},{0,1},{1,1},{1,0},{1,-1},{0,-1}};
+        vector<pair<int, int>> twohop = {{-2,-2},{-2,-1},{-2,0},{-2,1},{-2,2},{-1,2},{0,2},{1,2},{2,2},{2,1},{2,0},{2,-1},{2,-2},{1,-2},{0,-2},{-1,-2}};
+        
+        for(int k=0; k<q; k++){
+            int type = queries[k][0];
+            int i = queries[k][1];
+            int j = queries[k][2];
+            int sum = 0;
+            
+            vector<pair<int, int>> directions = (type==1)? onehop : twohop;
+            
+            for(auto d: directions){
+                int ni = i + d.first;
+                int nj = j + d.second;
+                
+                if(ni>=0 && ni<n && nj>=0 && nj<m){
+                    sum += mat[ni][nj];
+                }
+            }
+            result.push_back(sum);
+        }
+        return result;
+    }    
+};
