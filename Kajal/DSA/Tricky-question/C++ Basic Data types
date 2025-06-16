@@ -1,0 +1,37 @@
+https://www.geeksforgeeks.org/problems/c-basic-data-types3128/1?page=3&category=CPP&sortBy=submissions
+
+// User functiom template for C++
+
+class Solution {
+  public:
+    int BasicDataType(string s) {
+        // code here
+        if(s.length()==1 && !isdigit(s[0])){
+            return sizeof(char);
+        }
+        
+        size_t dot = s.find('.');
+        if(dot != string::npos){
+            int digitafterdot = s.length() - dot - 1;
+            if(digitafterdot >= 6){
+                return sizeof(double);
+            }
+            else{
+                return sizeof(float);
+            }
+        }
+        
+        bool all_digits = true;
+        for(char c : s){
+            if(!isdigit(c)){
+                all_digits = false;
+                break;
+            }
+        }
+        if(all_digits){
+            return sizeof(int);
+        }
+        
+        return sizeof(char);
+    }
+};
