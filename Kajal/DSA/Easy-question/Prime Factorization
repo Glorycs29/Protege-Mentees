@@ -1,0 +1,25 @@
+https://www.geeksforgeeks.org/problems/prime-factorization/1?page=3&category=CPP&sortBy=submissions
+
+// User function Template for C++
+
+// This function should print the prime factorization
+// of the number n
+// The new line is given by the driver's code.
+void printPrimeFactorization(int n) {
+    // code here
+    while(n%2==0){
+        cout<<2<<" ";
+        n/=2;
+    }
+    
+    for(int i=3; i*i<=n; i+=2){
+        while(n%i==0){
+            cout<<i<<" ";
+            n/=i;
+        }
+    }
+    
+    if(n>1){
+        cout<<n;
+    }
+}
