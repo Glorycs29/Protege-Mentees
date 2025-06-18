@@ -1,0 +1,14 @@
+
+-Sorting is essential for greedy selection of candies.
+
+-Two-pointer approach is used for both minimum and maximum calculations.
+
+-Greedy strategy: Always pay for the candies that will minimize or maximize your total cost, and take the rest for free as per the offer.
+
+Time Complexity: Dominated by the sorting step, i.e., 
+O(NlogN)
+
+
+So the goal isn't just to maximize money spent, it’s:
+
+⚠️ "To cover all candies, and spend as much (or as little) as possible under the buy-1-get-K-free constraint."
