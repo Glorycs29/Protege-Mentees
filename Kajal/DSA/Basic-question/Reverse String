@@ -1,0 +1,11 @@
+https://www.geeksforgeeks.org/problems/reverse-string--141628/1?page=5&category=CPP&sortBy=submissions
+
+// User function Template for C++
+
+// complete the function
+// the function should return the reversed string
+string reverseString(string &s) {
+    // code here
+    reverse(s.begin(), s.end());
+    return s;
+}
