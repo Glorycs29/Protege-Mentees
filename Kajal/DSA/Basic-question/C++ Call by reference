@@ -1,0 +1,21 @@
+https://www.geeksforgeeks.org/problems/c-call-by-reference/1?page=5&category=CPP&sortBy=submissions
+
+int reverse_number(int n){
+    int rev=0;
+    while(n>0){
+        rev = rev*10 + (n%10);
+        n /= 10;
+    }
+    return rev;
+}
+
+void reverse_dig(int &a, int &b) {
+    // Add your code here.
+    int temp = a;
+    a = b;
+    b = temp;
+    a = reverse_number(a);
+    b = reverse_number(b);
+    swap(a,b);
+}
+
