@@ -1,0 +1,18 @@
+https://www.geeksforgeeks.org/problems/find-one-extra-character/1?page=5&category=CPP&sortBy=submissions
+
+// User function Template for C++
+
+char extraChar(string &s1, string &s2) {
+
+    // code here
+    char r = 0;
+    for(char ch : s1){
+        r ^= ch;
+    }
+    
+    for(char ch : s2){
+        r ^= ch;
+    }
+    
+    return r;
+}
