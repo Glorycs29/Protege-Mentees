@@ -1,0 +1,19 @@
+https://www.geeksforgeeks.org/problems/c-matrix-rotation-by-180-degree0745/1?page=5&category=CPP&sortBy=submissions
+
+class Solution {
+  public:
+    void rotateMatrix(vector<vector<int>>& mat) {
+        // Code here
+        int n = mat.size();
+        
+        //reverse all rows(from top to bottom)
+        for(int i=0; i<n/2; i++){
+            swap(mat[i], mat[n-1-i]);
+        }
+        
+        //reverse each row
+        for(int i=0; i<n; i++){
+            reverse(mat[i].begin(), mat[i].end());
+        }
+    }
+};
