@@ -1,0 +1,17 @@
+// User function Template for C++
+
+int nextPrime(int n) {
+
+    // code here to find next prime number
+    // return next prime number
+    for(int i=n+1; i>n; i++){
+        bool isprime = true;
+        for(int j=2; j*j<=i; j++){
+            if(i%j==0){
+                isprime = false;
+                break;
+            }
+        }
+        if(isprime) return i;
+    }
+}
