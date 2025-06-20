@@ -1,0 +1,18 @@
+https://www.geeksforgeeks.org/problems/find-pattern--141628/1?page=6&category=CPP&sortBy=submissions
+
+// User function Template for C++
+
+// function should find if the string p is
+// in the string s. Return the starting index
+// of the string p in s. Return -1 if the
+// string doesnot exists in s.
+int findPattern(string &s, string &p) {
+    // code here
+    size_t pos = s.find(p);
+    if(pos!=string::npos){
+        return pos;
+    }
+    else{
+        return -1;
+    }
+}
