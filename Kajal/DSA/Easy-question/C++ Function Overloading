@@ -1,0 +1,16 @@
+https://www.geeksforgeeks.org/problems/c-function-overloading-1587115620/1?page=7&category=CPP&sortBy=submissions
+
+void volume(int s) {
+    // Add your code here.
+    cout<<s*s*s<<endl;
+}
+
+void volume(int r, int h) {
+    // Add your code here.
+    cout<<3.14159*r*r*h<<endl;
+}
+
+void volume(int l, int b, int h) {
+    // Add your code here.
+    cout<<l*b*h<<endl;
+}
