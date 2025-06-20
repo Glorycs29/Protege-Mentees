@@ -1,0 +1,23 @@
+https://www.geeksforgeeks.org/problems/fibonacci-number-1605700704/1?page=6&category=CPP&sortBy=submissions
+
+// User function Template for C++
+
+int fibonacci(int n) {
+
+    // Write your code here to calculate
+    // to calculate the nth fibonacci number
+    if(n==0) return 0;
+    if(n==1) return 1;
+    
+    int a = 0;
+    int b = 1;
+    int temp;
+    
+    for(int i=2; i<=n; i++){
+        temp = a+b;
+        a = b;
+        b = temp;
+    }
+    
+    return temp;
+}
