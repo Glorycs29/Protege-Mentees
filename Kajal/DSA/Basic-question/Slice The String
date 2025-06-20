@@ -1,0 +1,13 @@
+https://www.geeksforgeeks.org/problems/slice-the-string--141628/1?page=7&category=CPP&sortBy=submissions
+
+// User function Template for C++
+
+// functions should slice the given string
+// i.e. remove the first and the last character
+// of the given string and return the sliced
+// string
+string sliceString(string &s) {
+    // code here
+    string result = s.substr(1, s.length()-2);
+    return result;
+}
