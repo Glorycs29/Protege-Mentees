@@ -1,0 +1,75 @@
+https://www.geeksforgeeks.org/problems/hopscotch4857/1?page=6&category=CPP&sortBy=submissions
+
+// Back-end complete function Template for C++
+
+class Solution{
+public:
+    // Function to check if given indexes are valid within the matrix size.
+    bool valid(int i, int j, int n, int m) {
+        if(i >= 0 && j >= 0 && i < n && j < m)
+            return true;
+        return false;
+    }
+    
+    // Function to find the sum of numbers in the hopscotch pattern.
+    int hopscotch(int n, int m, vector<vector<int>> mat, int ty, int i, int j)
+    {
+        int sum = 0;
+        
+        // Checking the type of hopscotch pattern being used.
+        if(ty == 0) {
+            // if current column is even
+            if(j%2 == 0) {
+                if(valid(i-1, j-1, n, m)) sum += mat[i-1][j-1];
+                if(valid(i-1, j, n, m)) sum += mat[i-1][j];
+                if(valid(i-1, j+1, n, m)) sum += mat[i-1][j+1];
+                if(valid(i, j-1, n, m)) sum += mat[i][j-1];
+                if(valid(i, j+1, n, m)) sum += mat[i][j+1];
+                if(valid(i+1, j, n, m)) sum += mat[i+1][j];
+            }
+            // if current column is odd
+            else{
+                if(valid(i-1, j, n, m)) sum += mat[i-1][j];
+                if(valid(i, j-1, n, m)) sum += mat[i][j-1];
+                if(valid(i, j+1, n, m)) sum += mat[i][j+1];
+                if(valid(i+1, j-1, n, m)) sum += mat[i+1][j-1];
+                if(valid(i+1, j, n, m)) sum += mat[i+1][j];
+                if(valid(i+1, j+1, n, m)) sum += mat[i+1][j+1];
+            }
+        }
+        else{
+            // if current column is even
+            if(j%2 == 0) {
+                if(valid(i-2, j-1, n, m)) sum += mat[i-2][j-1]; 
+                if(valid(i-2, j, n, m)) sum += mat[i-2][j];
+                if(valid(i-2, j+1, n, m)) sum += mat[i-2][j+1]; 
+                if(valid(i-1, j-2, n, m)) sum += mat[i-1][j-2];
+                if(valid(i-1, j+2, n, m)) sum += mat[i-1][j+2]; 
+                if(valid(i, j-2, n, m)) sum += mat[i][j-2];
+                if(valid(i, j+2, n, m)) sum += mat[i][j+2]; 
+                if(valid(i+1, j-2, n, m)) sum += mat[i+1][j-2];
+                if(valid(i+1, j-1, n, m)) sum += mat[i+1][j-1]; 
+                if(valid(i+1, j+1, n, m)) sum += mat[i+1][j+1];
+                if(valid(i+1, j+2, n, m)) sum += mat[i+1][j+2]; 
+                if(valid(i+2, j, n, m)) sum += mat[i+2][j];
+            }
+            // if current column is odd
+            else{
+                if(valid(i-1, j-2, n, m)) sum += mat[i-1][j-2]; 
+                if(valid(i-1, j-1, n, m)) sum += mat[i-1][j-1];
+                if(valid(i-2, j, n, m)) sum += mat[i-2][j]; 
+                if(valid(i-1, j+1, n, m)) sum += mat[i-1][j+1];
+                if(valid(i-1, j+2, n, m)) sum += mat[i-1][j+2]; 
+                if(valid(i, j-2, n, m)) sum += mat[i][j-2];
+                if(valid(i, j+2, n, m)) sum += mat[i][j+2]; 
+                if(valid(i+1, j-2, n, m)) sum += mat[i+1][j-2];
+                if(valid(i+1, j+2, n, m)) sum += mat[i+1][j+2]; 
+                if(valid(i+2, j-1, n, m)) sum += mat[i+2][j-1];
+                if(valid(i+2, j, n, m)) sum += mat[i+2][j]; 
+                if(valid(i+2, j+1 ,n, m)) sum += mat[i+2][j+1];
+            }
+        }
+        // returning the sum of numbers in the hopscotch pattern.
+        return sum;
+    }
+};
