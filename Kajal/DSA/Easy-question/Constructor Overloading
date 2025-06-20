@@ -1,0 +1,23 @@
+https://www.geeksforgeeks.org/problems/constructor-overloading/1?page=6&category=CPP&sortBy=submissions
+
+// User function Template for C++
+
+// design a class with two constructor
+// one default, the other parameterized
+
+// code here
+class User{
+public:
+    string name;
+
+public:
+    // First constructor: No parameters
+    User() {
+        name = "Default";
+    }
+
+    // Second constructor: One parameter
+    User(string n) {
+        name = n;
+    }
+};
