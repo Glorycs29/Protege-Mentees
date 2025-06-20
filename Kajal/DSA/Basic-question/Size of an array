@@ -1,0 +1,10 @@
+https://www.geeksforgeeks.org/problems/size-of-an-array/1?page=6&category=CPP&sortBy=submissions
+
+// User function Template for C++
+
+// arr[] : declared and initialized above
+
+// calculate the size of the array arr[]
+int size = sizeof(arr)/sizeof(arr[0]);
+cout << size << endl;
+// driver code prints size
