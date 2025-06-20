@@ -1,0 +1,15 @@
+https://www.geeksforgeeks.org/problems/decimal-number-to-binary-number--141631/1?page=6&category=CPP&sortBy=submissions
+
+// User function Template for C++
+
+string toBinary(int n) {
+    // Your code here
+    if(n==0) return "0";
+    
+    string ans = "";
+    while(n > 0){
+        ans = char((n%2) + '0') + ans;
+        n /= 2;
+    }
+    return ans;
+}
