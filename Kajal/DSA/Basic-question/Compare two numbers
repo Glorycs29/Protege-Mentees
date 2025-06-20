@@ -1,0 +1,22 @@
+https://www.geeksforgeeks.org/problems/compare-two-numbers/1?page=7&category=CPP&sortBy=submissions
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    // code here
+    int a;
+    cin>>a;
+    
+    int b;
+    cin>>b;
+    
+    if(a>b){
+        cout<<1<<endl;
+    }
+    else{
+        cout<<0<<endl;
+    }
+
+    return 0;
+}
